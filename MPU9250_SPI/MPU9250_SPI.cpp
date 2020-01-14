@@ -60,7 +60,7 @@ void MPU9250_SPI::update(FusionMethod method)    {
     updateSensors();
     float deltat = (_tmr.read_us()/ 1000000.0f); // set integration time by time elapsed since last filter update
     _tmr.reset();
-    if (method == MAGDWICK){
+    if (method == MADGWICK){
       qFilter.update(-a.y, -a.x, a.z, g.y, g.x, -g.z, m.x, m.y, m.z, q,deltat);  // dot의 방향이 전진인 경우
       updateRPY();
     }
