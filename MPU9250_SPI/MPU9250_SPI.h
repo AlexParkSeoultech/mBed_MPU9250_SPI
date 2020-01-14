@@ -21,7 +21,7 @@ enum MagnBits { MGN_14BITS, MGN_16BITS };  // CNTL1 offset 4   0:14bits, 1:16bit
 enum MagnMode { MGN_POWER_DN=0, MGN_SNGL_MEAS=1, MGN_CONT_MEAS1=2,MGN_CONT_MEAS2=6,MGN_EX_TRIG=4,
                 MGN_SELF_TEST=8, MGN_FUSE_ROM=15}; // CNTL1 offset 0
 enum SampleRate {SR_1000HZ=0, SR_200HZ=4, SR_100HZ=9 };  // 1kHz/(1+SRD) 
-enum FusionMethod { COMPLEMENTARY, MAGDWICK};             
+enum FusionMethod { COMPLEMENTARY, MADGWICK};             
 struct Vect3 {float x,y,z;};
 class MPU9250_SPI {
     float aRes ;      // 가속도 (LSB 당의 값)
