@@ -27,7 +27,7 @@ int main(){
         if (mpu.isDataReady()){
             getDt(); 
         #ifndef RAW_DATA
-            mpu.update(MAGDWICK ); //  MAGDWICK  /COMPLEMENTARY
+            mpu.update(MADGWICK ); //  MADGWICK  /COMPLEMENTARY
             pc.printf("YPR,%5.2f,%5.2f,%5.2f\n", mpu.getYaw()*RAD_TO_DEG, mpu.getPitch()*RAD_TO_DEG, mpu.getRoll()*RAD_TO_DEG );
         #else
             Vect3  a, g, m;  // acc/gyro/mag vectors
